@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'PlayFair';
+    /* display: flex;*/
+    height: 100vh;                              /*sets the height to all the screen*/
+    overflow: hidden;
+    margin: 0;
+    padding-top: 15%;
+    background-color: teal;
+}
+
+.Container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input, button {
+    height: 25px;
+}
+
+#Result {
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  background-color: #fafafa;
+  transform-origin: top left;
+  width: 100vw;
+  min-height: 100vh;
+  padding-left: 39vh;
+  padding-right: 39vh;
+  font-size: 14px;
+}
+
+.container.origin {
+  transition: 0.8s;
+  transform-origin: top left;
+}
+
+.container.active {
+  transition: 0.8s;
+  transform: rotate(-17deg);
+  position: relative;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.circle.active button#open {
+  transition: 1.5s;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+.circle.active button#close {
+  transition: 1.5s;
+  top: 60%;
+  transform: rotate(-10deg);
+  transform-origin: top left;
+}
+
+.circle.origin button {
+  cursor: pointer;
+  transition: 0.8s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.content {
+  width: 100%;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.lista li#home {
+  position: absolute;
+  left: -135px;
+  bottom: 21%;
+  list-style-type: none;
+  transition: 0.8s;
+}
+
+.lista.active li#home {
+  list-style-type: none;
+  transition-delay: 0.5s;
+  transition: 1.5s;
+  position: absolute;
+  left: 30px;
+  color: white;
+}
+
+.lista li#about {
+  transition: 0.8s;
+  position: absolute;
+  left: -135px;
+  bottom: 14%;
+  list-style-type: none;
+}
+
+.lista.active li#about {
+  list-style-type: none;
+  transition-delay: 0.5s;
+  transition: 1.5s;
+  position: absolute;
+  left: 50px;
+  color: white;
+}
+
+.lista li#contact {
+  transition: 0.8s;
+  position: absolute;
+  left: -135px;
+  bottom: 7%;
+  list-style-type: none;
+}
+
+.lista.active li#contact {
+  list-style-type: none;
+  transition-delay: 0.5s;
+  transition: 1.5s;
+  position: absolute;
+  left: 70px;
+  color: white;
+}

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4486CB;
+  display: flex;
+  padding-top: 40vh;
+  justify-content: center;
+}
+
+.empty {
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-width: 3px;
+  background-color: white;
+  border-color: black;
+  margin: 5px;
+}
+
+.fill {
+  background-image: url('http://source.unsplash.com/random/150x150');
+  position: relative;
+  width: 145px;
+  height: 145px;
+  cursor: pointer;
+}
+
+.hold {
+  border: solid black 3px;
+}
+
+.hovered {
+  background: black;
+  border-style: dashed;
+  border-color: white;
+}
+
+@media (max-width: 800px) {
+}
